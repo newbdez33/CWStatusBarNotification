@@ -22,6 +22,10 @@
 		5E2FFB8E18367CA3003333F8 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FFB8C18367CA3003333F8 /* MainViewController.m */; };
 		5E2FFB8F18367CA3003333F8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FFB8D18367CA3003333F8 /* MainViewController.xib */; };
 		5E7E40DA19C0F9CF00A0E3E0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E7E40D919C0F9CF00A0E3E0 /* LaunchScreen.xib */; };
+		CE9649AC1D8D1BAD00AEB93B /* CWNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9649AA1D8D1BAD00AEB93B /* CWNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE9649AF1D8D1BAD00AEB93B /* CWNotification.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9649A81D8D1BAD00AEB93B /* CWNotification.framework */; };
+		CE9649B01D8D1BAD00AEB93B /* CWNotification.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE9649A81D8D1BAD00AEB93B /* CWNotification.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CE9649B51D8D1BB600AEB93B /* CWStatusBarNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D045D1838AE0D00CBFC35 /* CWStatusBarNotification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +36,28 @@
 			remoteGlobalIDString = 5E2FFB5218367C01003333F8;
 			remoteInfo = CWNotificationDemo;
 		};
+		CE9649AD1D8D1BAD00AEB93B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E2FFB4B18367C01003333F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE9649A71D8D1BAD00AEB93B;
+			remoteInfo = CWNotification;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CE9649B41D8D1BAD00AEB93B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE9649B01D8D1BAD00AEB93B /* CWNotification.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		370883CD19F08756000E79D6 /* CustomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomView.xib; sourceTree = "<group>"; };
@@ -55,6 +80,9 @@
 		5E2FFB8C18367CA3003333F8 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		5E2FFB8D18367CA3003333F8 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		5E7E40D919C0F9CF00A0E3E0 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		CE9649A81D8D1BAD00AEB93B /* CWNotification.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CWNotification.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9649AA1D8D1BAD00AEB93B /* CWNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CWNotification.h; sourceTree = "<group>"; };
+		CE9649AB1D8D1BAD00AEB93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +91,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E2FFB5918367C01003333F8 /* CoreGraphics.framework in Frameworks */,
+				CE9649AF1D8D1BAD00AEB93B /* CWNotification.framework in Frameworks */,
 				5E2FFB5B18367C01003333F8 /* UIKit.framework in Frameworks */,
 				5E2FFB5718367C01003333F8 /* Foundation.framework in Frameworks */,
 			);
@@ -78,6 +107,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE9649A41D8D1BAD00AEB93B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +122,7 @@
 			children = (
 				5E2FFB8518367C1B003333F8 /* CWStatusBarNotification */,
 				5E2FFB5C18367C01003333F8 /* CWNotificationDemo */,
+				CE9649A91D8D1BAD00AEB93B /* CWNotification */,
 				5E2FFB5518367C01003333F8 /* Frameworks */,
 				5E2FFB5418367C01003333F8 /* Products */,
 			);
@@ -96,6 +133,7 @@
 			children = (
 				5E2FFB5318367C01003333F8 /* CWNotificationDemo.app */,
 				5E2FFB6E18367C01003333F8 /* CWNotificationDemoTests.xctest */,
+				CE9649A81D8D1BAD00AEB93B /* CWNotification.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,7 +202,27 @@
 			name = MainViewController;
 			sourceTree = "<group>";
 		};
+		CE9649A91D8D1BAD00AEB93B /* CWNotification */ = {
+			isa = PBXGroup;
+			children = (
+				CE9649AA1D8D1BAD00AEB93B /* CWNotification.h */,
+				CE9649AB1D8D1BAD00AEB93B /* Info.plist */,
+			);
+			path = CWNotification;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CE9649A51D8D1BAD00AEB93B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9649AC1D8D1BAD00AEB93B /* CWNotification.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		5E2FFB5218367C01003333F8 /* CWNotificationDemo */ = {
@@ -174,10 +232,12 @@
 				5E2FFB4F18367C01003333F8 /* Sources */,
 				5E2FFB5018367C01003333F8 /* Frameworks */,
 				5E2FFB5118367C01003333F8 /* Resources */,
+				CE9649B41D8D1BAD00AEB93B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CE9649AE1D8D1BAD00AEB93B /* PBXTargetDependency */,
 			);
 			name = CWNotificationDemo;
 			productName = CWNotificationDemo;
@@ -202,6 +262,24 @@
 			productReference = 5E2FFB6E18367C01003333F8 /* CWNotificationDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		CE9649A71D8D1BAD00AEB93B /* CWNotification */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE9649B11D8D1BAD00AEB93B /* Build configuration list for PBXNativeTarget "CWNotification" */;
+			buildPhases = (
+				CE9649A31D8D1BAD00AEB93B /* Sources */,
+				CE9649A41D8D1BAD00AEB93B /* Frameworks */,
+				CE9649A51D8D1BAD00AEB93B /* Headers */,
+				CE9649A61D8D1BAD00AEB93B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CWNotification;
+			productName = CWNotification;
+			productReference = CE9649A81D8D1BAD00AEB93B /* CWNotification.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,9 +291,14 @@
 				TargetAttributes = {
 					5E2FFB5218367C01003333F8 = {
 						DevelopmentTeam = QMZH6X9D3C;
+						LastSwiftMigration = 0800;
 					};
 					5E2FFB6D18367C01003333F8 = {
 						TestTargetID = 5E2FFB5218367C01003333F8;
+					};
+					CE9649A71D8D1BAD00AEB93B = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -233,6 +316,7 @@
 			targets = (
 				5E2FFB5218367C01003333F8 /* CWNotificationDemo */,
 				5E2FFB6D18367C01003333F8 /* CWNotificationDemoTests */,
+				CE9649A71D8D1BAD00AEB93B /* CWNotification */,
 			);
 		};
 /* End PBXProject section */
@@ -251,6 +335,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5E2FFB6C18367C01003333F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE9649A61D8D1BAD00AEB93B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -278,6 +369,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CE9649A31D8D1BAD00AEB93B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE9649B51D8D1BB600AEB93B /* CWStatusBarNotification.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -285,6 +384,11 @@
 			isa = PBXTargetDependency;
 			target = 5E2FFB5218367C01003333F8 /* CWNotificationDemo */;
 			targetProxy = 5E2FFB7318367C01003333F8 /* PBXContainerItemProxy */;
+		};
+		CE9649AE1D8D1BAD00AEB93B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE9649A71D8D1BAD00AEB93B /* CWNotification */;
+			targetProxy = CE9649AD1D8D1BAD00AEB93B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -385,8 +489,10 @@
 				GCC_PREFIX_HEADER = "CWNotificationDemo/CWNotificationDemo-Prefix.pch";
 				INFOPLIST_FILE = "CWNotificationDemo/CWNotificationDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -403,8 +509,10 @@
 				GCC_PREFIX_HEADER = "CWNotificationDemo/CWNotificationDemo-Prefix.pch";
 				INFOPLIST_FILE = "CWNotificationDemo/CWNotificationDemo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -450,6 +558,70 @@
 			};
 			name = Release;
 		};
+		CE9649B21D8D1BAD00AEB93B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CWNotification/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.podbean.CWNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE9649B31D8D1BAD00AEB93B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = CWNotification/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.podbean.CWNotification;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +651,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		CE9649B11D8D1BAD00AEB93B /* Build configuration list for PBXNativeTarget "CWNotification" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE9649B21D8D1BAD00AEB93B /* Debug */,
+				CE9649B31D8D1BAD00AEB93B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
